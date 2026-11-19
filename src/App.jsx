@@ -17,7 +17,7 @@ export default function App() {
     setCart((currentCart) => currentCart.filter((x) => x.id === productId))
   }
 
-  const cartItems = products.map((product) => {
+  const cartItems = products.flatMap((product) => {
     const quantity = cart[product.id] ?? 0;
 
     if (quantity === 0) {
